@@ -1,6 +1,7 @@
 var game = function() {
     
     // private members
+    var document = document;
     var factorElement = document.getElementById('factor');
     var problemsPerGame = 3; // set default value
     

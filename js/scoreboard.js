@@ -1,7 +1,10 @@
-var Scoreboard = function() {
+define(['./player', './scoreboard'], function(player, scoreboard) {
+    
     // constructor function    
     console.log('Creating a scoreboard...');
     
+    var document = document;
+
     // private members
     var results = []; // array to store result of every game
     
@@ -31,5 +34,4 @@ var Scoreboard = function() {
         addResult: addResult,
         updateScoreboard: updateScoreboard
     }
-    
-};
+});
