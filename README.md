@@ -30,5 +30,9 @@ var scoreboard = function() {
     return {
         showMessage: printMessage  // expose the API with this object literal
     }
-}(); // immediately executing the function making its intance available
+}(); // immediately executing the function making its instance available
 ```
+
+## Module loaders
+RequireJs
+SystemJs
