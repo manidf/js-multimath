@@ -1,31 +1,24 @@
-var scoredboard = function() {
-
+var player = function() {
+    
     // private members
-    var results = [] //array to store results of every game
-
-    function addResult(newResult) {
-        results.push(newResult);
+    var playerName = '';
+    
+    function logPlayer() {
+        console.log('The current player is ' + playerName + '.');
     }
-
-    function updateScoreboard() {
-        var output = '<h2>Scoredboard</h2>';
-
-        // loop over all results and create the HTML for the scoreboard
-        for (var index = 0; index < results.length; index++) {
-            var result = results[index];
-            output += '<h4>';
-            output += 'result.name' + ': ' + result.score + '/' + result.problems + ' for factor ' + results.factor ;
-            output += '</h4>';
-        }
-
-        // add te updated scoreboard to the page
-        var scoreElement = document.getElementById('scores');
-        scoresElement.innerHTML = output;
+    
+    function setName(newName) {
+        playerName = newName;
     }
-
-    // return public members
+    
+    function getName() {
+        return playerName;
+    }
+    
     return {
-        addResult: addResult,
-        updateScoreboard: updateScoreboard
-    }
+        logPlayer: logPlayer,
+        setName: setName,
+        getName: getName
+    };
+    
 }();
