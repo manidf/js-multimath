@@ -14,6 +14,6 @@
     });
     
     // set the default number of problems
-    document.getElementById('problemCount').value = game.setProblemCount();
+    document.getElementById('problemCount').value = game.getProblemCount();
     
 })();
